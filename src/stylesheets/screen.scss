@@ -1,0 +1,141 @@
+@import 'base/variables';
+
+@import 'base/normalize';
+@import 'base/global';
+
+// Import Components
+// @import 'components/header';
+
+// Import Layouts
+// @import 'layouts/home';
+
+// Import Plugins
+// @import 'plugins/plugin';
+
+body{
+	font-family: sans-serif;
+}
+form.calc-form {
+  margin: 0;
+  overflow: hidden;
+}
+a{
+	text-decoration: none;
+}
+
+input.submit, input.submit-advanced{
+	margin-top: 20px;
+	float: right;
+}
+input{
+	width: 100%;
+  text-transform: capitalize;
+}
+input[type=text]{
+	border: 10px solid #FFFFFF;
+	margin-bottom: 5px;
+}
+.calculator {
+  max-width: 360px;
+  background: #1a3487;
+}
+.answers {
+  width: 100%;
+  height: 40px;
+  background: #e622a1;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 10px;
+}
+/*----- Tabs -----*/
+.tabs {
+  width:100%;
+  display:inline-block;
+  background: #ffffff;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+.tab-links:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+
+.tab-links li {
+  float:left;
+  list-style:none;
+}
+
+.tab-links a {
+  padding:9px 26px;
+  display:inline-block;
+  border-radius:3px 3px 0px 0px;
+  background:#7FB5DA;
+  color:#4c4c4c;
+  transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+  background:#a7cce5;
+  text-decoration:none;
+}
+ul.tab-links {
+    margin-bottom: 0;
+    padding-left: 0px;
+}
+
+li.active a, li.active a:hover {
+  background:#1a3487;
+  color:#FFFFFF;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+  border-radius:3px;
+  background:#fff;
+  width: 300px;
+}
+
+.tab {
+	display:none;
+	width: 270px;
+	padding: 30px;
+	background: #1a3487;
+}
+
+.tab.active {
+  display:block;
+}
+
+@media only screen and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 2){
+	body{
+		font-size: 3em;
+	}
+	.calculator {
+	  max-width: 80%;
+	  margin: 0 auto;
+	}
+	.answers{
+		padding: 30px 0;
+		height: auto;
+	}
+	.tab-content {
+	  width: auto;
+	}
+	.tab {
+		width: auto;
+		padding: 60px;
+	}
+	.tab-links a {
+    padding: 9px 17px;
+  }
+	input.submit, input.submit-advanced{
+		float: none;
+		padding: 20px 0;
+	}
+	input[type=text] {
+    border: 30px solid #FFFFFF;
+    margin-bottom: 40px;
+	}
+}
